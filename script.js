@@ -13,9 +13,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         { name: "Product 3", price: "$30", image: "assets/cake3.jpg" },
         { name: "Product 4", price: "$40", image: "assets/cake4.jpg" },
         { name: "Product 5", price: "$10", image: "assets/cake5.webp" },
-        { name: "Product 2", price: "$20", image: "assets/cake6.jpeg" },
-        { name: "Product 3", price: "$30", image: "assets/cake3.jpg" },
-        { name: "Product 4", price: "$40", image: "assets/cake4.jpg" }
+        { name: "Product 6", price: "$20", image: "assets/cake6.jpeg" },
+        
     ];
 
     const footerHtml = await fetchComponent('components/footer.html');

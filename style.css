@@ -112,3 +112,24 @@ footer p {
 .card_social {
     margin: 25px;
 }
+
+.slider {
+    position: relative;
+    width: auto;
+    height: 650px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+}
+

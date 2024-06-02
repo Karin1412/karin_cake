@@ -9,13 +9,15 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     const products = [
         { name: "Product 1", price: "$10", image: "assets/cake1.jpg" },
-        { name: "Product 2", price: "$20", image: "assets/cake2.png" },
+        { name: "Product 2", price: "$20", image: "assets/cake6.jpeg" },
         { name: "Product 3", price: "$30", image: "assets/cake3.jpg" },
         { name: "Product 4", price: "$40", image: "assets/cake4.jpg" },
         { name: "Product 5", price: "$10", image: "assets/cake5.webp" },
-        { name: "Product 6", price: "$20", image: "assets/cake6.jpeg" },
         
     ];
+
+    const sliderHtml = await fetchComponent('components/slider.html');
+    document.getElementById('slider').innerHTML = sliderHtml;
 
     const footerHtml = await fetchComponent('components/footer.html');
     document.getElementById('footer').innerHTML = footerHtml;
@@ -39,4 +41,22 @@ document.addEventListener("DOMContentLoaded", async function() {
         const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchTerm));
         filteredProducts.forEach(product => renderProduct(product));
     });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider .slides img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    setInterval(nextSlide, 3000);
 });

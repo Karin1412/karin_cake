@@ -89,3 +89,26 @@ header h1 {
 .buy-now:hover {
     background-color: #218838;
 }
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+.card_social a {
+    margin: 25px 20px;
+    font-size: 20px;
+}
+
+.card_social a:hover {
+    color: var(--primary-color);
+}
+
+.card_social {
+    margin: 25px;
+}
